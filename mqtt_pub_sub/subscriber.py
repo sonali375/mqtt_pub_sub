@@ -4,8 +4,8 @@ broker_port = 1883
 topic = "Task"
 
 
-# Callback function when a message is received
-def on_message(client, userdata, msg):
+# Callback function when a message is received and convert into python readable format
+def on_message(elf, userdata, msg):
     print(f"Received message: {msg.payload.decode()}")
 
 
